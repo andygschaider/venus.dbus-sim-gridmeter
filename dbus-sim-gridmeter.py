@@ -184,7 +184,7 @@ class DbusSimGridMeterService(object):
             grid_meter_values[path] = 0
         for path in self._paths:
             if path == '/Ac/L1/Voltage' or path == '/Ac/L2/Voltage' or path == '/Ac/L3/Voltage':
-                grid_meter_values[path] = (ac_meter_sum[path] + pv_inverter_sum[path]) / 2
+                grid_meter_values[path] = ((ac_meter_sum[path] + pv_inverter_sum[path]) / 2) if pv_inverter_sum[path]>0 else ac_meter_sum[path]
             else:
                 grid_meter_values[path] = ac_meter_sum[path] - pv_inverter_sum[path]
 

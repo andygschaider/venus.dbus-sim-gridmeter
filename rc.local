@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ln -s /data/dbus-sim-gridmeter/service /service/dbus-sim-gridmeter
+
+exit 0

@@ -3,8 +3,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SERVICE_NAME=$(basename $SCRIPT_DIR)
 
 # set permissions for script files
-chmod a+x $SCRIPT_DIR/kill_me.sh
-chmod 744 $SCRIPT_DIR/kill_me.sh
+chmod a+x $SCRIPT_DIR/killme.sh
+chmod 744 $SCRIPT_DIR/killme.sh
 chmod a+x $SCRIPT_DIR/service/run
 chmod 755 $SCRIPT_DIR/service/run
 
